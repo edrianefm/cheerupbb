@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Envelope</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .envelope-container {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            cursor: pointer;
+        }
+        #envelope {
+            width: 100%;
+            height: auto;
+        }
+        #letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; /* Increase width */
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: none;
+    font-size: 14px; /* Decrease font size if necessary */
+    line-height: 1.5; /* Improve readability */
+    word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+    </style>
+</head>
+<body>
+
+<div class="envelope-container" onclick="toggleLetter()">
+    <img id="envelope" src="https://static.vecteezy.com/system/resources/previews/012/805/812/non_2x/envelope-valentine-s-day-filled-clipart-love-free-png.png" alt="Envelope">
+    <div id="letter">
+        <p>Please remember,
+            I’m right here for you bibi ko.
+            I know how hard you're trying and I'm so proud of you.
+            You're dealing with stuff the best you can, even if you don't feel like the best at it.
+            I'm cheering on you.
+            I love you so much bibi ko. Mwa
+        </br>
+            - iane  
+        </p>
+    </div>
+</div>
+
+<script>
+    function toggleLetter() {
+        const letter = document.getElementById("letter");
+        if (letter.style.display === "none" || letter.style.display === "") {
+            letter.style.display = "block";
+        } else {
+            letter.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
